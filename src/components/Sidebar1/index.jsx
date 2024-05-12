@@ -184,7 +184,7 @@ export default function Sidebar1({ ...props }) {
               </div>
             </div>
           </div>
-          <div className="flex w-full">
+          {/* <div className="flex w-full">
             <Link href="/settings" className="w-full">
               <MenuItem
                 icon={
@@ -200,7 +200,7 @@ export default function Sidebar1({ ...props }) {
                 Settings
               </MenuItem>
             </Link>
-          </div>
+          </div> */}
         </div>
       </Menu>
     </Sidebar>
