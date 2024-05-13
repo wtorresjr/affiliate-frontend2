@@ -67,7 +67,7 @@ const Home = () => {
   return (
     <Wrapper header={2}>
         <div className="flex flex-wrap gap-5 bg-gradient-red p-4 rounded-[20px] w-full">
-        <div className="flex w-full" style={{ color: "white"}}>Welcome, John!</div>
+        <div className="flex w-full !text-[32px] font-bold pl-6 text-white-A700">Welcome, John!</div>
           <div className="flex w-[38%] justify-center rounded-[20px] bg-white-A700 px-[27px] pb-8 pt-[27px] md:w-full sm:p-5">
             <div className="flex w-full flex-col items-start gap-[11px]">
               <Text size="5xl" as="p" className="!text-[22.82px] font-medium">
@@ -119,7 +119,6 @@ const Home = () => {
             <Chart
               options={{
                 chart: {
-                  // height: 300,
                   width: "100%",
                   type: "line",
                   aspectRatio: 1,
@@ -137,7 +136,6 @@ const Home = () => {
                 },
                 
                 legend: {
-                  // position:"right",
                   tooltipHoverFormatter: function (val, opts) {
                     return (
                       val +
