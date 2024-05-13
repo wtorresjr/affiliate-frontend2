@@ -15,14 +15,14 @@ export default function Header1({ ...props }) {
     <header
       {...props}
       className={`${props.className} flex pb-4 md:flex-row justify-end items-center gap-[22px] w-full`}>
-      <div className=" flex max-w-[1199px] justify-end  items-center gap-[22px]">
+      <div className=" flex max-w-[1199px] justify-end  items-center gap-[22px] bg-black-900">
         <Input
           name="Search Field"
           placeholder={`Search`}
           value={searchBarValue}
           onChange={(e) => setSearchBarValue(e)}
           suffix={
-            <div className="flex h-[29px] w-[29px] items-center justify-center">
+            <div className="flex h-[29px] w-[29px] md:w-[200px] items-center justify-center">
               {searchBarValue?.length > 0 ? (
                 <CloseSVG
                   onClick={() => setSearchBarValue("")}
@@ -56,8 +56,7 @@ export default function Header1({ ...props }) {
             />
           }
           className="min-w-[236px] gap-[15px] sm:px-5 bg-[#FF3B2E] text-white-A700 rounded-[6px]"
-        >
-          Add New Affiliate
+        ><span className="lg:inline md:inline sm:hidden">Add New Affiliate</span>
         </Button>
       </div>
       <div className="flex justify-end items-center gap-[19px] md:w-full">

@@ -3,6 +3,8 @@ import Wrapper from "@/components/Wrapper";
 import React from "react";
 import Chart from "react-apexcharts";
 import { Button, Img, Text } from "./components-main";
+import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
+import 'react-tabs/style/react-tabs.css';
 
 const data = [
   {
@@ -64,6 +66,13 @@ const data = [
 const Home = () => {
   return (
     <Wrapper header={2}>
+      <Tabs className="w-full">
+    <TabList>
+      <Tab className="flex w-1/4 p-5">John Doe</Tab>
+    </TabList>
+
+    {/* <TabPanel> */}
+
       <div className="flex w-full">
         <div className="flex gap-5 md:flex-col bg-gradient-red p-4 rounded-[20px] w-full">
           <div className="flex w-[38%] justify-center rounded-[20px] bg-white-A700 px-[27px] pb-8 pt-[27px] md:w-full sm:p-5">
@@ -97,7 +106,7 @@ const Home = () => {
                     size="4xl"
                     as="p"
                     className="h-[25px] w-[26px] !font-medium"
-                  >
+                    >
                     24
                   </Text>
                   <Text size="4xl" as="p" className="!font-medium">
@@ -216,6 +225,8 @@ const Home = () => {
           </div>
         </div>
       </div>
+              {/* </TabPanel> */}
+            </Tabs>
     </Wrapper>
   );
 };
