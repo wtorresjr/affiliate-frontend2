@@ -141,7 +141,8 @@ const Home = () => {
                   dashArray: [0, 8, 5],
                 },
 
-                legend: {
+                  legend: {
+                  position:"right",
                   tooltipHoverFormatter: function (val, opts) {
                     return (
                       val +
