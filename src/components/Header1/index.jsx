@@ -14,15 +14,15 @@ export default function Header1({ ...props }) {
   return (
     <header
       {...props}
-      className={`${props.className} flex pb-4 md:flex-row justify-end items-center gap-[22px] w-full`}>
-      <div className=" flex max-w-[1199px] justify-end  items-center gap-[22px]">
+      className={`${props.className} flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-1/2 justify-between`}>
+      <div className=" flex gap-[22px]">
         <Input
           name="Search Field"
           placeholder={`Search`}
           value={searchBarValue}
           onChange={(e) => setSearchBarValue(e)}
           suffix={
-            <div className="flex h-[29px] w-[29px] md:w-[200px] items-center justify-center">
+            <div className="flex flex-grow items-center justify-center">
               {searchBarValue?.length > 0 ? (
                 <CloseSVG
                   onClick={() => setSearchBarValue("")}
@@ -40,7 +40,7 @@ export default function Header1({ ...props }) {
               )}
             </div>
           }
-          className="flex !h-[51px] rounded-lg flex-grow items-center justify-center gap-[35px] bg-white-A700 pl-[26px] pr-[18px] text-lg text-blue_gray-100 sm:pl-5"
+          className="flex flex-grow !h-[51px] rounded-lg items-center justify-center gap-[35px] bg-white-A700 pl-[26px] pr-[18px] text-lg text-blue_gray-100 sm:pl-5"
         />
 
         <Button
@@ -55,12 +55,12 @@ export default function Header1({ ...props }) {
               className="h-[23px] w-[23px]"
             />
           }
-          className="min-w-[236px] gap-[15px] sm:px-5 bg-[#FF3B2E] text-white-A700 rounded-[6px]"
+          className="flex grow-0 min-w-[236px] gap-[15px] sm:px-5 bg-[#FF3B2E] text-white-A700 rounded-[6px]"
         ><span className="lg:inline md:inline sm:hidden">Add New Affiliate</span>
         </Button>
       </div>
       <div className="flex justify-end items-center gap-[19px] md:w-full">
-        <Button shape="round" className="w-[51px] shadow-sm">
+        <Button shape="round" className="w-[51px] shadow-sm bg-white-A700">
           <Img src="img_vector.svg" width={51} height={51} />
         </Button>
 
