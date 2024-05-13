@@ -66,15 +66,8 @@ const data = [
 const Home = () => {
   return (
     <Wrapper header={2}>
-      <Tabs className="w-full">
-    <TabList>
-      <Tab className="flex w-1/4 p-5">John Doe</Tab>
-    </TabList>
-
-    {/* <TabPanel> */}
-
-      <div className="flex w-full">
-        <div className="flex gap-5 md:flex-col bg-gradient-red p-4 rounded-[20px] w-full">
+        <div className="flex flex-wrap gap-5 bg-gradient-red p-4 rounded-[20px] w-full">
+        <div className="flex w-full" style={{ color: "white"}}>Welcome, John!</div>
           <div className="flex w-[38%] justify-center rounded-[20px] bg-white-A700 px-[27px] pb-8 pt-[27px] md:w-full sm:p-5">
             <div className="flex w-full flex-col items-start gap-[11px]">
               <Text size="5xl" as="p" className="!text-[22.82px] font-medium">
@@ -119,15 +112,17 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 flex-col items-start gap-[3px] rounded-[20px] bg-white-A700 px-[41px] pb-[35px] pt-[27px] md:self-stretch md:px-5 sm:p-5 overflow-auto">
+          <div className="flex flex-1 flex-col gap-[3px] rounded-[20px] bg-white-A700 px-[41px] pb-[35px] pt-[27px] md:self-stretch md:px-5 sm:p-5 overflow-auto">
             <Text size="5xl" as="p" className="!text-[22.82px] font-medium">
               Partner Summary Trends
             </Text>
             <Chart
               options={{
                 chart: {
-                  height: 200,
+                  // height: 300,
+                  width: "100%",
                   type: "line",
+                  aspectRatio: 1,
                   zoom: {
                     enabled: false,
                   },
@@ -140,9 +135,9 @@ const Home = () => {
                   curve: "straight",
                   dashArray: [0, 8, 5],
                 },
-
-                  legend: {
-                  position:"right",
+                
+                legend: {
+                  // position:"right",
                   tooltipHoverFormatter: function (val, opts) {
                     return (
                       val +
@@ -153,7 +148,7 @@ const Home = () => {
                       "</strong>"
                     );
                   },
-                },
+              },
                 markers: {
                   size: 0,
                   hover: {
@@ -221,13 +216,10 @@ const Home = () => {
               ]}
               type="line"
               height={200}
-              width={400}
-            />
+              // width={}
+              />
           </div>
-        </div>
-      </div>
-              {/* </TabPanel> */}
-            </Tabs>
+        </div>          
     </Wrapper>
   );
 };
