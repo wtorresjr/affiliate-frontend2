@@ -9,13 +9,13 @@ import { Button, Img, Text } from "./..";
 export default function Header1({ ...props }) {
   const [searchBarValue, setSearchBarValue] = React.useState("");
 
+  
   const pathname = usePathname();
   return (
     <header
       {...props}
-      className={`${props.className} flex md:flex-col justify-end w-full items-center gap-[22px] pt-2`}
-    >
-      <div className=" flex  max-w-[1199px] justify-end  items-center gap-[22px]">
+      className={`${props.className} flex md:flex-col justify-end items-center gap-[22px] w-full`}>
+      <div className=" flex max-w-[1199px] justify-end  items-center gap-[22px]">
         <Input
           name="Search Field"
           placeholder={`Search`}
@@ -45,7 +45,7 @@ export default function Header1({ ...props }) {
 
         <Button
           size="lg"
-          shape="square"
+          // shape="square"
           leftIcon={
             <Img
               src="img_plus_white_a700.svg"
@@ -55,7 +55,7 @@ export default function Header1({ ...props }) {
               className="h-[23px] w-[23px]"
             />
           }
-          className="min-w-[236px] gap-[15px] sm:px-5 bg-[#FF3B2E] text-white-A700 rounded-lg"
+          className="min-w-[236px] gap-[15px] sm:px-5 bg-[#FF3B2E] text-white-A700 rounded-[6px]"
         >
           Add New Affiliate
         </Button>

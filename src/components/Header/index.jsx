@@ -17,7 +17,7 @@ export default function Header({ ...props }) {
   return (
     <header
       {...props}
-      className={`${props.className} flex  self-stretch justify-between items-center gap-5 pt-1`}
+      className={`${props.className} flex  self-stretch justify-between items-center gap-5`}
     >
       <SelectBox
         size="md"
