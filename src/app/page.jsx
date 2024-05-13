@@ -64,7 +64,7 @@ const data = [
 const Home = () => {
   return (
     <Wrapper header={2}>
-      {/* <div className="bottom-0 left-0 right-0 top-0 m-auto h-[320px] w-full bg-[url(/images/img_group_320x1493.png)] bg-cover bg-no-repeat px-5 pb-5 pt-[100px] md:h-auto md:pt-5"> */}
+      <div className="flex w-full">
         <div className="flex gap-5 md:flex-col bg-gradient-red p-4 rounded-[20px] w-full">
           <div className="flex w-[38%] justify-center rounded-[20px] bg-white-A700 px-[27px] pb-8 pt-[27px] md:w-full sm:p-5">
             <div className="flex w-full flex-col items-start gap-[11px]">
@@ -215,7 +215,7 @@ const Home = () => {
             />
           </div>
         </div>
-      {/* </div> */}
+      </div>
     </Wrapper>
   );
 };

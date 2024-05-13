@@ -9,7 +9,7 @@ export default function Wrapper({ children, header = 1 }) {
     <>
       <div className="flex items-start md:flex-col">
         <Sidebar1 />
-        <div className="flex flex-1 flex-col items-start md:self-stretch">
+        <div className="flex flex-1 flex-col items-start pt-20 p-5 md:self-stretch">
           {header === 1 && <Header />}
           {header === 2 && <Header1 />}
           {children}

@@ -14,7 +14,7 @@ export default function Header1({ ...props }) {
   return (
     <header
       {...props}
-      className={`${props.className} flex md:flex-col justify-end items-center gap-[22px] w-full`}>
+      className={`${props.className} flex pb-4 md:flex-col justify-end items-center gap-[22px] w-full`}>
       <div className=" flex max-w-[1199px] justify-end  items-center gap-[22px]">
         <Input
           name="Search Field"
