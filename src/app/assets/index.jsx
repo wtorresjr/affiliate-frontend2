@@ -32,9 +32,11 @@ export default function WireframeBrandAssetsOnePage() {
           />
       </div>     
       </div>
-      <div className="flex flex-row pl-32 md:flex-col">
+      <div className="flex flex-row pl-32 flex-wrap">
       <DownloadComponent itemTitle={"Brand Images"} />
       <DownloadComponent itemTitle={"Brand Documents"} />
+      {/* <DownloadComponent itemTitle={"Brand Documents"} />
+      <DownloadComponent itemTitle={"Brand Documents"} /> */}
       </div>
 
       {/*Upload divs - components*/}
@@ -50,9 +52,11 @@ export default function WireframeBrandAssetsOnePage() {
             <div className="mt-1.5 flex items-center gap-[13px] self-end cursor-pointer">
           </div>    
       </div>
-      <div className="flex flex-row pl-32 md:flex-col">
+      <div className="flex flex-row pl-32 flex-wrap">
       <UploadComponent itemTitle={"Brand Images"} />
       <UploadComponent itemTitle={"Brand Documents"} />
+      {/* <UploadComponent itemTitle={"Brand Documents"} />
+      <UploadComponent itemTitle={"Brand Documents"} /> */}
       </div>
     </Wrapper>
   );
