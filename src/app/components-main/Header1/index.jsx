@@ -8,28 +8,6 @@ export default function Header1({ ...props }) {
       <div className="mx-auto flex w-full max-w-[1199px] flex-1 items-center justify-between md:self-stretch">
         <div className="flex w-[50%] flex-col items-start md:w-full">
           <div className="relative z-[1] flex h-[51px] items-center justify-center self-stretch bg-[url(/images/img_group_white_a700.svg)] bg-cover bg-no-repeat px-2.5 pb-2 pt-2.5 md:h-auto">
-            <div className="flex items-center sm:flex-col">
-              <Text size="lg" as="p" className="!text-[12.77px] !font-normal">
-                Date Range:
-              </Text>
-              <div className="ml-[13px] flex h-[33px] items-center bg-[url(/images/img_group_white_a700_33x228.svg)] bg-cover bg-no-repeat px-2.5 pb-[7px] pt-2.5 md:h-auto sm:ml-0">
-                <div className="flex items-center gap-[7px]">
-                  <Img
-                    src="img_calendar.svg"
-                    width={14}
-                    height={14}
-                    alt="calendar"
-                    className="h-[14px] w-[14px] self-start"
-                  />
-                  <Text size="lg" as="p" className="!text-[12.77px] !font-normal">
-                    May 05, 2024 - Jun 05, 2024
-                  </Text>
-                </div>
-              </div>
-              <Text size="lg" as="p" className="ml-1.5 !text-[12.77px] !font-normal !text-gray-500 sm:ml-0">
-                vs. May 05, 2024 - Jun 05, 2024
-              </Text>
-            </div>
           </div>
           <div className="relative mt-[-51px] flex w-[44%] justify-center rounded-[11px] bg-white-A700 px-[13px] pb-3.5 pt-[13px] md:w-full">
             <div className="flex w-full items-center justify-between gap-5">

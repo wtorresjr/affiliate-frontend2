@@ -6,4 +6,8 @@ import { Button } from "./Button";
 import { ReactTable } from "./ReactTable";
 import { Input } from "./Input";
 import { TextArea } from "./TextArea";
-export { Text, Heading, Img, SelectBox, Button, ReactTable, Input, TextArea };
+import { DateRange } from "./DateRange";
+import { DownloadComponent } from "@/app/assets/DownloadComponent";
+import { UploadComponent } from "@/app/assets/UploadComponent";
+
+export { Text, Heading, Img, SelectBox, Button, ReactTable, Input, TextArea, DateRange, DownloadComponent, UploadComponent };

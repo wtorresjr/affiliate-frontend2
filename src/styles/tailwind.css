@@ -44,3 +44,12 @@ select:focus {
   --tw-ring-color: transparent;
   border-color: transparent;
 }
+
+@layer utilities{
+  .five-px-padding-wbg{
+    background-color:white;
+    padding:5px 50px;
+    border-radius: 8px;
+  }
+}
+

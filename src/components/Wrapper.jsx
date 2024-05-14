@@ -7,11 +7,11 @@ import Sidebar1 from "./Sidebar1";
 export default function Wrapper({ children, header = 1 }) {
   return (
     <>
-      <div className="flex items-start gap-[37px] md:flex-col">
+      <div className="flex items-start md:flex-col">
         <Sidebar1 />
-        <div className="flex flex-1 flex-col items-start md:self-stretch md:p-5 pb-10">
+        <div className="flex flex-1 flex-col items-start pt-20 p-5 w-full">
           {header === 1 && <Header />}
-          {header === 2 && <Header1 />}
+          {header === 2 && <Header1 className="absolute right-5" />}
           {children}
         </div>
       </div>

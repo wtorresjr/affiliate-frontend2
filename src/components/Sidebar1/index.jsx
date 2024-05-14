@@ -7,9 +7,10 @@ export default function Sidebar1({ ...props }) {
   const [collapsed, setCollapsed] = React.useState(false);
 
   //use this function to collapse/expand the sidebar
-  //function collapseSidebar() {
+  // function collapseSidebar() {
   //    setCollapsed(!collapsed)
-  //}
+  // }
+
   return (
     <Sidebar
       {...props}

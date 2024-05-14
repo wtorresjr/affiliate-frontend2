@@ -6,7 +6,7 @@ import { CloseSVG } from "../../assets/images";
 import { Button, Img, Input, SelectBox, Text } from "../../components";
 import { ReactTable } from "../../components/ReactTable";
 
-const dropDownOptions = [
+export const dropDownOptions = [
   { label: "Option1", value: "option1" },
   { label: "Option2", value: "option2" },
   { label: "Option3", value: "option3" },

@@ -15,9 +15,14 @@ module.exports = {
         blue_gray: { 100: "#d8d8d8" },
         green: { 200: "#94e8b4" },
         light_green: { 100: "#d3fad6" },
+        gradient_red: ['#ff3b2e', '#fa372c', '#d31d20', '#bb0c19', '#b30717'],
+        bodygray:{212:"#e7ebf8"},
       },
       boxShadow: { xs: "1px 1px 50px 0px #0000000c", sm: "1px 1px 10px 0px #0000000c" },
       fontFamily: { inter: "Inter" },
+      backgroundImage: theme => ({
+        "gradient-red":`linear-gradient(90deg, ${theme('colors.gradient_red').join(', ')})`
+      })
     },
   },
   plugins: [require("@tailwindcss/forms")],

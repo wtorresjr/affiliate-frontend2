@@ -2,7 +2,10 @@
 import Wrapper from "@/components/Wrapper";
 import React from "react";
 import Chart from "react-apexcharts";
-import { Button, Img, Text } from "./components-main";
+import { Button, Img, Text} from "./components-main";
+import { DateRange } from "@/components";
+import { SelectBox } from "@/components";
+import { dropDownOptions } from "./products";
 
 const data = [
   {
@@ -64,8 +67,8 @@ const data = [
 const Home = () => {
   return (
     <Wrapper header={2}>
-      <div className=" bottom-0 left-0 right-0 top-0 m-auto h-[320px] w-full bg-[url(/images/img_group_320x1493.png)] bg-cover bg-no-repeat px-5 pb-5 pt-[100px] md:h-auto md:pt-5">
-        <div className="flex gap-5 md:flex-col">
+      <div className="flex flex-wrap gap-5 bg-gradient-red p-4 rounded-[20px] w-full">
+        <div className="flex w-full !text-[32px] font-bold pl-6 text-white-A700">Welcome, John!</div>
           <div className="flex w-[38%] justify-center rounded-[20px] bg-white-A700 px-[27px] pb-8 pt-[27px] md:w-full sm:p-5">
             <div className="flex w-full flex-col items-start gap-[11px]">
               <Text size="5xl" as="p" className="!text-[22.82px] font-medium">
@@ -97,7 +100,7 @@ const Home = () => {
                     size="4xl"
                     as="p"
                     className="h-[25px] w-[26px] !font-medium"
-                  >
+                    >
                     24
                   </Text>
                   <Text size="4xl" as="p" className="!font-medium">
@@ -110,15 +113,16 @@ const Home = () => {
               </div>
             </div>
           </div>
-          <div className="flex flex-1 flex-col items-start gap-[3px] rounded-[20px] bg-white-A700 px-[41px] pb-[35px] pt-[27px] md:self-stretch md:px-5 sm:p-5 overflow-auto">
+          <div className="flex flex-1 flex-col gap-[3px] rounded-[20px] bg-white-A700 px-[41px] pb-[35px] pt-[27px] md:self-stretch md:px-5 sm:p-5 overflow-auto">
             <Text size="5xl" as="p" className="!text-[22.82px] font-medium">
               Partner Summary Trends
             </Text>
             <Chart
               options={{
                 chart: {
-                  height: 200,
+                  width: "100%",
                   type: "line",
+                  aspectRatio: 1,
                   zoom: {
                     enabled: false,
                   },
@@ -131,7 +135,7 @@ const Home = () => {
                   curve: "straight",
                   dashArray: [0, 8, 5],
                 },
-
+                
                 legend: {
                   tooltipHoverFormatter: function (val, opts) {
                     return (
@@ -143,29 +147,29 @@ const Home = () => {
                       "</strong>"
                     );
                   },
+              },
+              markers: {
+                size: 0,
+                hover: {
+                  sizeOffset: 6,
                 },
-                markers: {
-                  size: 0,
-                  hover: {
-                    sizeOffset: 6,
-                  },
-                },
-                xaxis: {
-                  categories: [
-                    "01 Jan",
-                    "02 Jan",
-                    "03 Jan",
-                    "04 Jan",
-                    "05 Jan",
-                    "06 Jan",
-                    "07 Jan",
-                    "08 Jan",
-                    "09 Jan",
-                    "10 Jan",
-                    "11 Jan",
-                    "12 Jan",
-                  ],
-                },
+              },
+              xaxis: {
+                categories: [
+                  "01 Jan",
+                  "02 Jan",
+                  "03 Jan",
+                  "04 Jan",
+                  "05 Jan",
+                  "06 Jan",
+                  "07 Jan",
+                  "08 Jan",
+                  "09 Jan",
+                  "10 Jan",
+                  "11 Jan",
+                  "12 Jan",
+                ],
+              },
                 tooltip: {
                   y: [
                     {
@@ -211,12 +215,20 @@ const Home = () => {
               ]}
               type="line"
               height={200}
-              width={400}
-            />
+              
+              />
           </div>
-        </div>
-      </div>
+        </div>          
+    
+      <div className="flex w-full items-center justify-between">
+      <DateRange />
+      <SelectBox
+  placeholder={"Brand/Products"}
+  options={dropDownOptions}
+  className="flex items-center bg-white-A700 rounded-[8px]"/>
+  </div>
     </Wrapper>
+
   );
 };
 export default Home;
