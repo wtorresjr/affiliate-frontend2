@@ -2,11 +2,10 @@
 import Wrapper from "@/components/Wrapper";
 import React from "react";
 import Chart from "react-apexcharts";
-import { Button, Img, Text } from "./components-main";
-import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
-import 'react-tabs/style/react-tabs.css';
-import Header1 from "./components-main/Header1";
+import { Button, Img, Text} from "./components-main";
 import { DateRange } from "@/components";
+import { SelectBox } from "@/components";
+import { dropDownOptions } from "./products";
 
 const data = [
   {
@@ -149,28 +148,28 @@ const Home = () => {
                     );
                   },
               },
-                markers: {
-                  size: 0,
-                  hover: {
-                    sizeOffset: 6,
-                  },
+              markers: {
+                size: 0,
+                hover: {
+                  sizeOffset: 6,
                 },
-                xaxis: {
-                  categories: [
-                    "01 Jan",
-                    "02 Jan",
-                    "03 Jan",
-                    "04 Jan",
-                    "05 Jan",
-                    "06 Jan",
-                    "07 Jan",
-                    "08 Jan",
-                    "09 Jan",
-                    "10 Jan",
-                    "11 Jan",
-                    "12 Jan",
-                  ],
-                },
+              },
+              xaxis: {
+                categories: [
+                  "01 Jan",
+                  "02 Jan",
+                  "03 Jan",
+                  "04 Jan",
+                  "05 Jan",
+                  "06 Jan",
+                  "07 Jan",
+                  "08 Jan",
+                  "09 Jan",
+                  "10 Jan",
+                  "11 Jan",
+                  "12 Jan",
+                ],
+              },
                 tooltip: {
                   y: [
                     {
@@ -216,12 +215,20 @@ const Home = () => {
               ]}
               type="line"
               height={200}
-
+              
               />
           </div>
         </div>          
- <DateRange/>
+    
+      <div className="flex w-full items-center justify-between">
+      <DateRange />
+      <SelectBox
+  placeholder={"Brand/Products"}
+  options={dropDownOptions}
+  className="flex items-center bg-white-A700 rounded-[8px]"/>
+  </div>
     </Wrapper>
+
   );
 };
 export default Home;
