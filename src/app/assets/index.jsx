@@ -35,8 +35,7 @@ export default function WireframeBrandAssetsOnePage() {
       <div className="flex flex-row pl-32 flex-wrap">
       <DownloadComponent itemTitle={"Brand Images"} />
       <DownloadComponent itemTitle={"Brand Documents"} />
-      {/* <DownloadComponent itemTitle={"Brand Documents"} />
-      <DownloadComponent itemTitle={"Brand Documents"} /> */}
+      <DownloadComponent itemTitle={"Brand Videos"} />
       </div>
 
       {/*Upload divs - components*/}
@@ -55,8 +54,7 @@ export default function WireframeBrandAssetsOnePage() {
       <div className="flex flex-row pl-32 flex-wrap">
       <UploadComponent itemTitle={"Brand Images"} />
       <UploadComponent itemTitle={"Brand Documents"} />
-      {/* <UploadComponent itemTitle={"Brand Documents"} />
-      <UploadComponent itemTitle={"Brand Documents"} /> */}
+      <UploadComponent itemTitle={"Brand Videos"} />
       </div>
     </Wrapper>
   );

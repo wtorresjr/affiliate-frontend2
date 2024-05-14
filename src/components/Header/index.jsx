@@ -28,26 +28,33 @@ export default function Header({ ...props }) {
             width={16}
             height={8}
             alt="arrow_down"
-            className="h-[8px] w-[16px] ml-1"
+            className="h-[8px] w-[16px] ml-8"
           />
         }
         name="Brand Dropdown"
         placeholder={`Brand 1`}
         options={dropDownOptions}
-        className=" gap-px "
+        className="flex justify-between bg-white-A700 !rounded-[8px]"
       />
 
-      <SignedOut>
-        <SignInButton />
-      </SignedOut>
+       <div className="flex justify-end items-center gap-[19px] md:w-full">
+        <Button shape="round" className="w-[51px] shadow-sm bg-white-A700">
+          <Img src="img_vector.svg" width={51} height={51} />
+        </Button>
 
-      <SignedIn>
-        <UserButton
-          afterSignOutUrl={`${
-            typeof window !== "undefined" ? window.location.origin : ""
-          }${pathname}`}
-        />
-      </SignedIn>
+        <SignedOut>
+          <SignInButton />
+        </SignedOut>
+
+        <SignedIn>
+          {"John Doe"}
+          <UserButton
+            afterSignOutUrl={`${
+              typeof window !== "undefined" ? window.location.origin : ""
+              }${pathname}`}
+          />
+        </SignedIn>
+      </div>
     </header>
   );
 }
