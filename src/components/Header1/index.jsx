@@ -15,14 +15,14 @@ export default function Header1({ ...props }) {
     <header
       {...props}
       className={`${props.className} flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-1/2 justify-between`}>
-      <div className=" flex gap-[22px]">
+      <div className=" flex gap-[22px] flex-grow">
         <Input
           name="Search Field"
           placeholder={`Search`}
           value={searchBarValue}
           onChange={(e) => setSearchBarValue(e)}
           suffix={
-            <div className="flex flex-grow items-center justify-center">
+            <div className="flex items-center justify-center flex-grow">
               {searchBarValue?.length > 0 ? (
                 <CloseSVG
                   onClick={() => setSearchBarValue("")}
