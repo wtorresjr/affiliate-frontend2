@@ -6,4 +6,5 @@ import { Button } from "./Button";
 import { ReactTable } from "./ReactTable";
 import { Input } from "./Input";
 import { TextArea } from "./TextArea";
-export { Text, Heading, Img, SelectBox, Button, ReactTable, Input, TextArea };
+import { DateRange } from "./DateRange";
+export { Text, Heading, Img, SelectBox, Button, ReactTable, Input, TextArea, DateRange };

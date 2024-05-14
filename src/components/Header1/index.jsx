@@ -14,7 +14,7 @@ export default function Header1({ ...props }) {
   return (
     <header
       {...props}
-      className={`${props.className} flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-1/2 justify-between`}>
+      className={`${props.className} flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-3/5 justify-between rounded-bl-[20px]`}>
       <div className=" flex gap-[22px] flex-grow">
         <Input
           name="Search Field"

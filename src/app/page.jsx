@@ -6,6 +6,7 @@ import { Button, Img, Text } from "./components-main";
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 import 'react-tabs/style/react-tabs.css';
 import Header1 from "./components-main/Header1";
+import { DateRange } from "@/components";
 
 const data = [
   {
@@ -219,6 +220,7 @@ const Home = () => {
               />
           </div>
         </div>          
+ <DateRange/>
     </Wrapper>
   );
 };
