@@ -1,5 +1,6 @@
 import Link from "next/link";
 import React from "react";
+import { useEffect } from "react";
 import { Menu, MenuItem, Sidebar, sidebarClasses } from "react-pro-sidebar";
 import { Img } from "./..";
 import { NEXT_ROUTER_PREFETCH } from "next/dist/client/components/app-router-headers";
@@ -8,10 +9,27 @@ import { useRouter } from "next/navigation";
 export default function Sidebar1({ ...props }) {
   const [collapsed, setCollapsed] = React.useState(false);
 
-  //use this function to collapse/expand the sidebar
-  // function collapseSidebar() {
-  //    setCollapsed(!collapsed)
-  // }
+  useEffect(() => {
+    const mediaQuery = window.matchMedia(`(max-width: 1024px)`);
+
+    const handleResize = () => {
+      if (mediaQuery.matches) {
+        setCollapsed(true);
+      } else {
+        setCollapsed(false);
+      }
+    };
+
+    handleResize();
+
+    const resizeObserver = new ResizeObserver(handleResize);
+    resizeObserver.observe(document.body);
+
+    return () => {
+      resizeObserver.disconnect();
+    };
+  }, []);
+
   const router = useRouter();
 
   const handleNav = (navItemClicked) => {
@@ -25,7 +43,7 @@ export default function Sidebar1({ ...props }) {
       collapsedWidth="80px !important"
       collapsed={collapsed}
       rootStyles={{ [`.${sidebarClasses.container}`]: { gap: 83 } }}
-      className={`${props.className} flex flex-col h-screen pt-[79px] pl-[23px] pr-[21px] gap-[83px] top-0 md:gap-[62px] md:pt-5 md:p-5 sm:gap-[41px] sm:px-5 bg-black-900 shadow-xs !sticky overflow-auto md:hidden`}
+      className={`${props.className} flex flex-col h-screen pt-[79px] pl-[23px] pr-[21px] gap-[83px] top-0 md:gap-[62px] md:pt-5 md:p-5 sm:gap-[41px] sm:px-5 bg-black-900 shadow-xs !sticky overflow-auto`}
     >
       <Img
         onClick={() => {
