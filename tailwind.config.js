@@ -1,3 +1,5 @@
+const autoprefixer = require("autoprefixer");
+
 module.exports = {
   mode: "jit",
   content: [
@@ -5,14 +7,15 @@ module.exports = {
     "./src/**/*.{js,ts,jsx,tsx,html,mdx}",
   ],
   darkMode: "class",
+
   theme: {
     screens: {
       xs: { max: "475px" },
       sm: { max: "640px" },
       md: { max: "768px" },
       lg: { max: "1024px" },
-      xl: { max: "1280px" },
-      xxl: { max: "1536px" },
+      xl: { max: "1464px" },
+      xxl: { max: "1668px" },
     },
     extend: {
       colors: {

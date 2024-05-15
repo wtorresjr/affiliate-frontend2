@@ -2,6 +2,8 @@ import Link from "next/link";
 import React from "react";
 import { Menu, MenuItem, Sidebar, sidebarClasses } from "react-pro-sidebar";
 import { Img } from "./..";
+import { NEXT_ROUTER_PREFETCH } from "next/dist/client/components/app-router-headers";
+import { useRouter } from "next/navigation";
 
 export default function Sidebar1({ ...props }) {
   const [collapsed, setCollapsed] = React.useState(false);
@@ -10,6 +12,11 @@ export default function Sidebar1({ ...props }) {
   // function collapseSidebar() {
   //    setCollapsed(!collapsed)
   // }
+  const router = useRouter();
+
+  const handleNav = (navItemClicked) => {
+    router.push(navItemClicked);
+  };
 
   return (
     <Sidebar
@@ -51,157 +58,166 @@ export default function Sidebar1({ ...props }) {
           <div className="relative ">
             <div className="absolute  m-auto w-full">
               <div className="flex flex-col gap-3">
-                <Link href="/">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="home.svg"
-                        width={24}
-                        height={19}
-                        alt="brand folder icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                  >
-                    Dashboard
-                  </MenuItem>
-                </Link>
-                <Link href="/assets">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="img_folder.svg"
-                        width={24}
-                        height={19}
-                        alt="brand folder icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                  >
-                    Brand Assets
-                  </MenuItem>
-                </Link>
-                <Link href="/campaigns">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="img_vector_white_a700.svg"
-                        width={24}
-                        height={19}
-                        alt="campaigns icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                  >
-                    Campaigns
-                  </MenuItem>
-                </Link>
-                <Link href="/affiliates">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="affiliate.svg"
-                        width={24}
-                        height={19}
-                        alt="affiliates icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                  >
-                    Affiliates
-                  </MenuItem>
-                </Link>
-                <Link href="/integrations">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="img_vector_white_a700_12x10.svg"
-                        width={24}
-                        height={19}
-                        alt="integrations icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                  >
-                    Integrations
-                  </MenuItem>
-                </Link>
-                <Link href="/billing">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="Vector (4).svg"
-                        width={24}
-                        height={19}
-                        alt="integrations icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                  >
-                    Billing & Payment
-                  </MenuItem>
-                </Link>
-                <Link href="/knowledge">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="img_vector_white_a700_15x13.svg"
-                        width={24}
-                        height={19}
-                        alt="knowledge icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                  >
-                    Knowledge Base
-                  </MenuItem>
-                </Link>
-                <Link href="/products">
-                  <MenuItem
-                    icon={
-                      <Img
-                        src="img_vector_white_a700_10x20.svg"
-                        width={24}
-                        height={19}
-                        alt="products icon"
-                        className="h-[24px] w-[19px]"
-                      />
-                    }
-                    // suffix={
-                    //   <div className="flex flex-col justify-center">
-                    //     <Img
-                    //       src="img_arrow_right_white_a700.svg"
-                    //       width={9}
-                    //       height={16}
-                    //       alt="arrow image"
-                    //       className="h-[16px]"
-                    //     />
-                    //   </div>
-                    // }
-                  >
-                    Products
-                  </MenuItem>
-                </Link>
+                {/* <Link href="/"> */}
+                <MenuItem
+                  onClick={() => handleNav("/")}
+                  icon={
+                    <Img
+                      src="home.svg"
+                      width={24}
+                      height={19}
+                      alt="brand folder icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                >
+                  Dashboard
+                </MenuItem>
+                {/* </Link> */}
+                {/* <Link href="/assets"> */}
+                <MenuItem
+                  onClick={() => handleNav("/assets")}
+                  icon={
+                    <Img
+                      src="img_folder.svg"
+                      width={24}
+                      height={19}
+                      alt="brand folder icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                >
+                  Brand Assets
+                </MenuItem>
+                {/* </Link> */}
+                {/* <Link href="/campaigns"> */}
+                <MenuItem
+                  onClick={() => handleNav("/campaigns")}
+                  icon={
+                    <Img
+                      src="img_vector_white_a700.svg"
+                      width={24}
+                      height={19}
+                      alt="campaigns icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                >
+                  Campaigns
+                </MenuItem>
+                {/* </Link> */}
+                {/* <Link href="/affiliates"> */}
+                <MenuItem
+                  onClick={() => handleNav("/affiliates")}
+                  icon={
+                    <Img
+                      src="affiliate.svg"
+                      width={24}
+                      height={19}
+                      alt="affiliates icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                >
+                  Affiliates
+                </MenuItem>
+                {/* </Link> */}
+                {/* <Link href="/integrations"> */}
+                <MenuItem
+                  onClick={() => handleNav("/integrations")}
+                  icon={
+                    <Img
+                      src="img_vector_white_a700_12x10.svg"
+                      width={24}
+                      height={19}
+                      alt="integrations icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                >
+                  Integrations
+                </MenuItem>
+                {/* </Link> */}
+                {/* <Link href="/billing"> */}
+                <MenuItem
+                  onClick={() => handleNav("/billing")}
+                  icon={
+                    <Img
+                      src="Vector (4).svg"
+                      width={24}
+                      height={19}
+                      alt="integrations icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                >
+                  Billing & Payment
+                </MenuItem>
+                {/* </Link> */}
+                {/* <Link href="/knowledge"> */}
+                <MenuItem
+                  onClick={() => handleNav("/knowledge")}
+                  icon={
+                    <Img
+                      src="img_vector_white_a700_15x13.svg"
+                      width={24}
+                      height={19}
+                      alt="knowledge icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                >
+                  Knowledge Base
+                </MenuItem>
+                {/* </Link> */}
+                {/* <Link href="/products"> */}
+                <MenuItem
+                  onClick={() => handleNav("/products")}
+                  icon={
+                    <Img
+                      src="img_vector_white_a700_10x20.svg"
+                      width={24}
+                      height={19}
+                      alt="products icon"
+                      className="h-[24px] w-[19px]"
+                    />
+                  }
+                  // suffix={
+                  //   <div className="flex flex-col justify-center">
+                  //     <Img
+                  //       src="img_arrow_right_white_a700.svg"
+                  //       width={9}
+                  //       height={16}
+                  //       alt="arrow image"
+                  //       className="h-[16px]"
+                  //     />
+                  //   </div>
+                  // }
+                >
+                  Products
+                </MenuItem>
+                {/* </Link> */}
               </div>
             </div>
           </div>
-          {/* <div className="flex w-full">
-            <Link href="/settings" className="w-full">
-              <MenuItem
-                icon={
-                  <Img
-                    src="img_search.svg"
-                    width={25}
-                    height={25}
-                    alt="search icon"
-                    className="h-[25px] w-[25px]"
-                  />
-                }
-              >
-                Settings
-              </MenuItem>
-            </Link>
-          </div> */}
+          <div className="flex w-full">
+            {/* <Link href="/settings" className="w-full"> */}
+            <MenuItem
+              onClick={() => handleNav("/settings")}
+              icon={
+                <Img
+                  src="img_search.svg"
+                  width={25}
+                  height={25}
+                  alt="search icon"
+                  className="h-[25px] w-[25px]"
+                />
+              }
+            >
+              Settings
+            </MenuItem>
+            {/* </Link> */}
+          </div>
         </div>
       </Menu>
     </Sidebar>

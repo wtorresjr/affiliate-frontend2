@@ -69,12 +69,12 @@ const Home = () => {
   return (
     <Wrapper>
       <Header1 className="dashboard-header-style" />
-      <Tabs className="w-full md:mt-20">
-        <TabList className="md:hidden">
+      <Tabs className="w-full xl:mt-[60px]">
+        <TabList className="xl:hidden">
           <Tab>Welcome, John!</Tab>
         </TabList>
         <TabPanel>
-          <div className="flex flex-wrap gap-5 bg-gradient-red p-4 rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px] md:rounded-[20px]">
+          <div className="flex flex-wrap gap-5 bg-gradient-red p-4 rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px] xl:rounded-[20px]">
             <div className="flex w-[38%] justify-center rounded-[20px] bg-white-A700 px-[27px] pb-8 pt-[27px] md:w-full sm:p-5">
               <div className="flex w-full flex-col items-start gap-[11px]">
                 <Text size="5xl" as="p" className="!text-[22.82px] font-medium">

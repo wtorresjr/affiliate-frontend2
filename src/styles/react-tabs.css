@@ -15,12 +15,11 @@
   display: inline-block;
   /* border: 1px solid transparent; */
   border-bottom: none;
-  bottom: -1px;
   position: relative;
   list-style: none;
-  padding: 10px 22px;
+  padding: 11px 22px;
   cursor: pointer;
-  background-color: red !important;
+  background-color:#ff3b2e !important;
   color: white !important;
   font-size: 32px;
   font-weight: bold;
@@ -49,7 +48,7 @@
   left: -4px;
   right: -4px;
   bottom: -5px;
-  background: #fff;
+  /* background: #fff; */
 }
 
 .react-tabs__tab-panel {
@@ -58,4 +57,8 @@
 
 .react-tabs__tab-panel--selected {
   display: block;
+}
+
+.test-class{
+  @apply flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-3/5 justify-between rounded-bl-[20px] absolute right-5;
 }
