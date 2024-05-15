@@ -7,7 +7,19 @@ import { ReactTable } from "./ReactTable";
 import { Input } from "./Input";
 import { TextArea } from "./TextArea";
 import { DateRange } from "./DateRange";
-import { DownloadComponent } from "@/app/assets/DownloadComponent";
-import { UploadComponent } from "@/app/assets/UploadComponent";
+import { UploadComponent } from "./UploadComponent";
+import { DownloadComponent } from "./DownloadComponent";
 
-export { Text, Heading, Img, SelectBox, Button, ReactTable, Input, TextArea, DateRange, DownloadComponent, UploadComponent };
+export {
+  Text,
+  Heading,
+  Img,
+  SelectBox,
+  Button,
+  ReactTable,
+  Input,
+  TextArea,
+  DateRange,
+  DownloadComponent,
+  UploadComponent,
+};

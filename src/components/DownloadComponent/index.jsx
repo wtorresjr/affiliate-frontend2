@@ -1,4 +1,4 @@
-import { Heading, Img, Text } from "../components-main"
+import { Heading, Img, Text } from "../../app/components-main"
 const DownloadComponent = ({itemTitle}) => {
     return (
         <>
