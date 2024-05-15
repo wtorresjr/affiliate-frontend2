@@ -68,8 +68,8 @@ const data = [
 const Home = () => {
   return (
     <Wrapper>
-      <Header1 className="dashboard-header-style" />
-      <Tabs className="w-full xl:mt-[60px]">
+      <Header1 className="sm:flex flex-col-reverse gap-3"/>
+      <Tabs className="w-full sm:mt-3">
         <TabList className="xl:hidden">
           <Tab>Welcome, John!</Tab>
         </TabList>
@@ -77,7 +77,7 @@ const Home = () => {
           <div className="flex flex-wrap gap-5 bg-gradient-red p-4 rounded-tr-[20px] rounded-br-[20px] rounded-bl-[20px] xl:rounded-[20px]">
             <div className="flex w-[38%] justify-center rounded-[20px] bg-white-A700 px-[27px] pb-8 pt-[27px] md:w-full sm:p-5">
               <div className="flex w-full flex-col items-start gap-[11px]">
-                <Text size="5xl" as="p" className="!text-[22.82px] font-medium">
+                <Text size="5xl" as="p" className="!text-[22.82px] font-medium sm:!text-[20px]">
                   Partner Summary Snapshot
                 </Text>
                 <div className="flex items-center justify-between gap-5 self-stretch">
@@ -120,7 +120,7 @@ const Home = () => {
               </div>
             </div>
             <div className="flex flex-1 flex-col gap-[3px] rounded-[20px] bg-white-A700 px-[41px] pb-[35px] pt-[27px] md:self-stretch md:px-5 sm:p-5 overflow-auto">
-              <Text size="5xl" as="p" className="!text-[22.82px] font-medium">
+              <Text size="5xl" as="p" className="!text-[22.82px] font-medium sm:!text-[20px]">
                 Partner Summary Trends
               </Text>
 

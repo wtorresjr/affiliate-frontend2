@@ -97,7 +97,7 @@ export const ChartComponent = () => {
         },
       ]}
       type="line"
-      height={200}
+      height={250}
     />
   );
 };

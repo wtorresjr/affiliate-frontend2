@@ -1,9 +1,8 @@
-import Link from "next/link";
 import React from "react";
 import { useEffect } from "react";
 import { Menu, MenuItem, Sidebar, sidebarClasses } from "react-pro-sidebar";
 import { Img } from "./..";
-import { NEXT_ROUTER_PREFETCH } from "next/dist/client/components/app-router-headers";
+// import { NEXT_ROUTER_PREFETCH } from "next/dist/client/components/app-router-headers";
 import { useRouter } from "next/navigation";
 
 export default function Sidebar1({ ...props }) {
@@ -35,6 +34,8 @@ export default function Sidebar1({ ...props }) {
   const handleNav = (navItemClicked) => {
     router.push(navItemClicked);
   };
+
+
 
   return (
     <Sidebar
