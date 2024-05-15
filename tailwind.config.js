@@ -1,7 +1,7 @@
 const autoprefixer = require("autoprefixer");
 
 module.exports = {
-  mode: "jit",
+  // mode: "jit",
   content: [
     "./src/**/**/*.{js,ts,jsx,tsx,html,mdx}",
     "./src/**/*.{js,ts,jsx,tsx,html,mdx}",

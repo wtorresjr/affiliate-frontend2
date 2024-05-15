@@ -28,11 +28,14 @@ export default function Sidebar1({ ...props }) {
       className={`${props.className} flex flex-col h-screen pt-[79px] pl-[23px] pr-[21px] gap-[83px] top-0 md:gap-[62px] md:pt-5 md:p-5 sm:gap-[41px] sm:px-5 bg-black-900 shadow-xs !sticky overflow-auto md:hidden`}
     >
       <Img
+        onClick={() => {
+          handleNav("/");
+        }}
         src="img_sidebar_logo.png"
         width={230}
         height={63}
         alt="sidebar logo"
-        className="h-[63px] w-[230px] object-contain"
+        className="h-[63px] w-[230px] object-contain hover:cursor-pointer"
       />
       <Menu
         menuItemStyles={{
