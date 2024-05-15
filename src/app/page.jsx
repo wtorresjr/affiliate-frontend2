@@ -141,7 +141,7 @@ const Home = () => {
       </Tabs>
 
       {/* Date Range Div */}
-      <div className="flex w-full items-center justify-between">
+      <div className="sm:flex flex-col-reverse gap-3 mt-3">
         <DateRange />
         <SelectBox
           placeholder={"Brand/Products"}

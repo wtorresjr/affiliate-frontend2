@@ -3,7 +3,7 @@ import { Img, Text, Button } from "./..";
 
 const DateRange = () => {
     return (
-           <div className="flex items-center sm:flex-col five-px-padding-wbg mt-6">
+           <div className="flex items-center sm:flex-col five-px-padding-wbg">
               <Text size="lg" as="p" className="!text-[12.77px] !font-normal">
                 Date Range:
               </Text>
