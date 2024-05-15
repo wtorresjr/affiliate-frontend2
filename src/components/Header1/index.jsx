@@ -37,7 +37,7 @@ export default function Header1({ ...props }) {
               )}
             </div>
           }
-          className="flex flex-grow !h-[51px] rounded-lg items-center justify-center gap-[35px] bg-white-A700 pl-[26px] pr-[18px] text-lg text-blue_gray-100 sm:pl-5"
+          className="flex flex-grow !h-[51px] rounded-lg items-center justify-center gap-[35px] bg-white-A700 pl-[26px] pr-[18px] text-lg text-blue_gray-100 xxl:!w-1/4 xxl:bg-red-600 sm:pl-5"
         />
 
         <Button

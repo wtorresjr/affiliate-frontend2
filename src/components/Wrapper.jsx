@@ -7,7 +7,7 @@ import Sidebar1 from "./Sidebar1";
 export default function Wrapper({ children, header }) {
   return (
     <>
-      <div className="flex items-start md:flex-col">
+      <div className="flex items-start">
         <Sidebar1 />
         <div className="flex flex-1 flex-col items-start pt-20 p-5 w-full">
           {header === 1 && <Header />}

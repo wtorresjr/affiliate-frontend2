@@ -51,18 +51,20 @@ select:focus {
     padding: 5px 50px;
     border-radius: 8px;
   }
-}
-
-@layer utilities {
   .dashboard-header-style {
     display: flex;
     padding-bottom: 8px;
     padding-right: 16px;
     flex-flow: row;
     justify-content: space-between;
-    width: 100%;
+    position: absolute;
+    right: 5px;
     gap: 22px;
+    flex-grow: 1;
+    width:60%;
   }
 }
+
+
 
 /* "flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-3/5 justify-between rounded-bl-[20px] absolute right-5" */
