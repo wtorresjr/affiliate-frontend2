@@ -11,7 +11,7 @@ export const CampaignPageView = () => {
   return (
     <>
       {/* <Header1 className="flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-3/5 justify-between rounded-bl-[20px] absolute right-5" /> */}
-      <Header1 className="dashboard-header-style" />
+      <Header1 className="sm:flex flex-col-reverse gap-3" />
     </>
   );
 };
