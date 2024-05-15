@@ -9,6 +9,7 @@ import { TextArea } from "./TextArea";
 import { DateRange } from "./DateRange";
 import { UploadComponent } from "./UploadComponent";
 import { DownloadComponent } from "./DownloadComponent";
+import { ChartComponent } from "./ChartComp";
 
 export {
   Text,
@@ -22,4 +23,5 @@ export {
   DateRange,
   DownloadComponent,
   UploadComponent,
+  ChartComponent,
 };

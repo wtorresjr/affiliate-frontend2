@@ -9,13 +9,10 @@ import { Button, Img, Text } from "./..";
 export default function Header1({ ...props }) {
   const [searchBarValue, setSearchBarValue] = React.useState("");
 
-  
   const pathname = usePathname();
   return (
-    <header
-      {...props}
-      className={`${props.className} flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-3/5 justify-between rounded-bl-[20px]`}>
-      <div className=" flex gap-[22px] flex-grow">
+    <header {...props} className={`${props.className}`}>
+      <div className="flex gap-[22px] flex-grow">
         <Input
           name="Search Field"
           placeholder={`Search`}
@@ -56,7 +53,10 @@ export default function Header1({ ...props }) {
             />
           }
           className="flex grow-0 min-w-[236px] gap-[15px] sm:px-5 bg-[#FF3B2E] text-white-A700 rounded-[6px]"
-        ><span className="lg:inline md:inline sm:hidden">Add New Affiliate</span>
+        >
+          <span className="lg:inline md:inline sm:hidden">
+            Add New Affiliate
+          </span>
         </Button>
       </div>
       <div className="flex justify-end items-center gap-[19px] md:w-full">

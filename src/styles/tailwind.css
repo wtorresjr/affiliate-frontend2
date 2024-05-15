@@ -45,11 +45,24 @@ select:focus {
   border-color: transparent;
 }
 
-@layer utilities{
-  .five-px-padding-wbg{
-    background-color:white;
-    padding:5px 50px;
+@layer utilities {
+  .five-px-padding-wbg {
+    background-color: white;
+    padding: 5px 50px;
     border-radius: 8px;
   }
 }
 
+@layer utilities {
+  .dashboard-header-style {
+    display: flex;
+    padding-bottom: 8px;
+    padding-right: 16px;
+    flex-flow: row;
+    justify-content: space-between;
+    width: 100%;
+    gap: 22px;
+  }
+}
+
+/* "flex pb-2 pr-4 flex-row gap-[22px] bg-bodygray-212 w-3/5 justify-between rounded-bl-[20px] absolute right-5" */

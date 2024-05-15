@@ -3,6 +3,7 @@ import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
 import "../styles/font.css";
 import "../styles/index.css";
+import "../styles/tailwind.css";
 
 function RootLayout({ children }) {
   return (
