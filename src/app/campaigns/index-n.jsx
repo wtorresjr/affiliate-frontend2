@@ -19,9 +19,6 @@ export const CampaignPageView = () => {
             key={"userprofile" + index}
             className="px-2.5 pt-2.5"
             campData={d}
-            // image={d.image}
-            // commission={d.commission}
-            // amount={d.amount}
           />
         ))}
       </div>
