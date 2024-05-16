@@ -11,7 +11,7 @@ export default function Header1({ ...props }) {
 
   const pathname = usePathname();
   return (
-    <header {...props} className={`${props.className}`}>
+    <header {...props} className={`${props.className} sm:mt-3`}>
       <div className="flex gap-[22px] w-full">
         <Input
           name="Search Field"
@@ -58,8 +58,6 @@ export default function Header1({ ...props }) {
         </Button>
       </div>
 
-
-      
       <div className="sm:flex justify-between items-center">
         <Button shape="round" className="w-[51px] shadow-sm bg-white-A700">
           <Img src="img_vector.svg" width={51} height={51} />

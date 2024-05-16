@@ -15,8 +15,8 @@ export default function Header({ ...props }) {
   const pathname = usePathname();
 
   return (
-    <header {...props} className={`${props.className}`}>
-      <div className="sm:flex flex-col-reverse gap-[3px] w-full ">
+    <header {...props} className={`${props.className} sm:mt-3`}>
+      <div className="sm:flex flex-col-reverse gap-[22px] w-full ">
         <SelectBox
           size="md"
           shape="square"

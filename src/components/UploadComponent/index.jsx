@@ -3,7 +3,7 @@ const UploadComponent = ({itemTitle}) => {
     return (
         <>
             
-            <div className="flex flex-col pt-6 gap-[23px] pr-20">
+            <div className="flex flex-col pt-6 gap-[23px]">
             <Text size="lg" as="p" className="ml-3.5 md:ml-0">
               {itemTitle}
             </Text>

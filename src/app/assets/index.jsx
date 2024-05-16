@@ -19,14 +19,15 @@ export default function WireframeBrandAssetsOnePage() {
       <Heading
         size="s"
         as="h2"
-        className="mt-[59px] !text-[40.71px] !text-black-900"
+        className="!text-xxl !text-black-900 sm:flex justify-center p-8 xs:!text-xl"
       >
         Asset Library
       </Heading>
 
-      <div className="mt-[21px] flex flex-col items-start w-full">
-        <div className="h-[2px] bg-gray-100 w-full" />
-        <div className="mt-1.5 flex items-center gap-[13px] self-end cursor-pointer">
+      <div className="mt-[21px] flex flex-col w-full">
+        {/* Line */}
+        <div className="h-[2px] bg-gray-100 sm:flex"></div>
+        <div className="cursor-pointer sm:flex justify-center items-center gap-4 pt-4 pb-4">
           <Text size="6xl" as="p">
             Download All
           </Text>
@@ -39,7 +40,8 @@ export default function WireframeBrandAssetsOnePage() {
           />
         </div>
       </div>
-      <div className="flex flex-row pl-32 flex-wrap">
+
+      <div className="sm:flex flex-row flex-wrap justify-center">
         <DownloadComponent itemTitle={"Brand Images"} />
         <DownloadComponent itemTitle={"Brand Documents"} />
         <DownloadComponent itemTitle={"Brand Videos"} />
@@ -49,15 +51,15 @@ export default function WireframeBrandAssetsOnePage() {
       <Heading
         size="s"
         as="h2"
-        className="mt-[59px] !text-[40.71px] !text-black-900"
+        className="!text-xxl !text-black-900 sm:flex justify-center p-8 xs:!text-xl"
       >
         Upload
       </Heading>
-      <div className="mt-[21px] flex flex-col items-start w-full">
-        <div className="h-[2px] bg-gray-100 w-full" />
-        <div className="mt-1.5 flex items-center gap-[13px] self-end cursor-pointer"></div>
-      </div>
-      <div className="flex flex-row pl-32 flex-wrap">
+
+      {/* Line */}
+
+      <div className="sm:flex w-full bg-gray-100 h-[2px]"></div>
+      <div className="sm:flex flex-row flex-wrap justify-center">
         <UploadComponent itemTitle={"Brand Images"} />
         <UploadComponent itemTitle={"Brand Documents"} />
         <UploadComponent itemTitle={"Brand Videos"} />
