@@ -7,30 +7,6 @@ import Sidebar4 from "../../components/Sidebar4";
 import WireframeCampaigns1OneUserprofile from "../../components/WireframeCampaigns1OneUserprofile";
 import { CampaignPageView } from "./index-n";
 
-const data = [
-  {
-    commission: "Commission",
-    amount: "$4,000.00",
-    image: "img_vector_red_500_01.svg",
-  },
-  {
-    commission: "Brand Referral Bonus",
-    amount: "$4,000.00",
-    image: "img_vector_5x3.svg",
-  },
-  { commission: "Clicks", amount: "$4,000.00", image: "img_vector_1.svg" },
-  {
-    commission: "Detail Page Views",
-    amount: "$4,000.00",
-    image: "img_vector_yellow_900_5x3.svg",
-  },
-  {
-    commission: "Add to Carts",
-    amount: "$4,000.00",
-    image: "img_vector_2.svg",
-  },
-  { commission: "Conversions", amount: "$4,000.00", image: "img_vector_1.svg" },
-];
 
 export default function WireframeCampaigns1OnePage() {
   return (
@@ -356,7 +332,7 @@ export default function WireframeCampaigns1OnePage() {
     //               size="s"
     //               as="p"
     //               className="ml-[9px] self-end !text-[9.35px]"
-    //             >
+    //             > 
     //               ...
     //             </Text>
     //             <Text

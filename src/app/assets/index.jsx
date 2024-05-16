@@ -57,7 +57,6 @@ export default function WireframeBrandAssetsOnePage() {
       </Heading>
 
       {/* Line */}
-
       <div className="sm:flex w-full bg-gray-100 h-[2px]"></div>
       <div className="sm:flex flex-row flex-wrap justify-center">
         <UploadComponent itemTitle={"Brand Images"} />
