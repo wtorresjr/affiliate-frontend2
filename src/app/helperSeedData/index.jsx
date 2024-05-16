@@ -1,26 +1,46 @@
 export const campaignData = [
   {
+    commission: "Sales",
+    amount: `$${(Math.random(1000, 10000) * 10000).toFixed(2)}`,
+    image: "img_vector_yellow_900_5x3.svg",
+    percentage: 21,
+  },
+  {
     commission: "Commission",
-    amount: "$4,000.00",
+    amount: `$${(Math.random(1000, 10000) * 10000).toFixed(2)}`,
     image: "img_vector_red_500_01.svg",
+    percentage: 11,
   },
   {
     commission: "Brand Referral Bonus",
-    amount: "$4,000.00",
+    amount: `$${(Math.random(1000, 10000) * 10000).toFixed(2)}`,
     image: "img_vector_5x3.svg",
+    percentage: 7,
   },
-  { commission: "Clicks", amount: "$4,000.00", image: "img_vector_1.svg" },
+  {
+    commission: "Clicks",
+    amount: `$${(Math.random(1000, 10000) * 10000).toFixed(2)}`,
+    image: "img_vector_1.svg",
+    percentage: 22,
+  },
   {
     commission: "Detail Page Views",
-    amount: "$4,000.00",
+    amount: `$${(Math.random(1000, 10000) * 10000).toFixed(2)}`,
     image: "img_vector_yellow_900_5x3.svg",
+    percentage: 9,
   },
   {
     commission: "Add to Carts",
-    amount: "$4,000.00",
+    amount: `$${(Math.random(1000, 10000) * 10000).toFixed(2)}`,
     image: "img_vector_2.svg",
+    percentage: 16,
   },
-  { commission: "Conversions", amount: "$4,000.00", image: "img_vector_1.svg" },
+  {
+    commission: "Conversions",
+    amount: `$${(Math.random(1000, 10000) * 10000).toFixed(2)}`,
+    image: "img_vector_1.svg",
+    percentage: 10,
+  },
 ];
 
 export const hpDateData = [

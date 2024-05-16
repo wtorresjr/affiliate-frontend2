@@ -6,7 +6,7 @@ import Header1 from "../../components/Header1";
 import Sidebar4 from "../../components/Sidebar4";
 import WireframeCampaigns1OneUserprofile from "../../components/WireframeCampaigns1OneUserprofile";
 import { CampaignPageView } from "./index-n";
-
+import { campaignData } from "../helperSeedData";
 
 export default function WireframeCampaigns1OnePage() {
   return (
@@ -46,9 +46,9 @@ export default function WireframeCampaigns1OnePage() {
     //             </Text>
     //           </div>
     //         </div>
-    //       </div>
-    //       <div className="flex flex-1 gap-[26px] md:flex-col md:self-stretch">
-    //         {data.map((d, index) => (
+    //        </div>
+    //        <div className="flex flex-1 gap-[26px] md:flex-col md:self-stretch">
+    //          {campaignData.map((d, index) => (
     //           <WireframeCampaigns1OneUserprofile
     //             {...d}
     //             key={"userprofile" + index}
@@ -332,7 +332,7 @@ export default function WireframeCampaigns1OnePage() {
     //               size="s"
     //               as="p"
     //               className="ml-[9px] self-end !text-[9.35px]"
-    //             > 
+    //             >
     //               ...
     //             </Text>
     //             <Text
