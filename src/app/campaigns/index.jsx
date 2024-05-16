@@ -6,7 +6,6 @@ import Header1 from "../../components/Header1";
 import Sidebar4 from "../../components/Sidebar4";
 import WireframeCampaigns1OneUserprofile from "../../components/WireframeCampaigns1OneUserprofile";
 import { CampaignPageView } from "./index-n";
-import { campaignData } from "../helperSeedData";
 
 export default function WireframeCampaigns1OnePage() {
   return (

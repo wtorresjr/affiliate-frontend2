@@ -15,9 +15,8 @@ export default function WireframeCampaigns1OneUserprofile({
     //   {...props}
     //   className={`${props.className} sm:flex items-center pb-3 border-black-900 border-[0.5px] border-solid bg-indigo-50 rounded-[20px] active:bg-white-A700`}
     // >
-    <div className="sm:flex items-center pb-3 border-black-900 border-[0.5px] border-solid bg-indigo-50 rounded-[20px] active:bg-white-A700"
-    >
-      <Button size="md" className="w-[40px] rounded-[22px]">
+    <div className="sm:flex items-center pb-3 border-black-900 border-[0.5px] border-solid bg-indigo-50 rounded-[20px] active:bg-white-A700">
+      <Button size="md" className="w-[40px] rounded-[22px] bg-black-900">
         <Img src={image} width={45} height={45} />
       </Button>
       <div className="flex flex-col items-start gap-0.5">
