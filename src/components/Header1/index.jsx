@@ -57,6 +57,9 @@ export default function Header1({ ...props }) {
           <span className="sm:hidden">Add New Affiliate</span>
         </Button>
       </div>
+
+
+      
       <div className="sm:flex justify-between items-center">
         <Button shape="round" className="w-[51px] shadow-sm bg-white-A700">
           <Img src="img_vector.svg" width={51} height={51} />

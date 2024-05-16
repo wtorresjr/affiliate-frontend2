@@ -8,6 +8,7 @@ import { dropDownOptions } from "./products";
 import Header1 from "@/components/Header1";
 import { Tabs, TabPanel, TabList, Tab } from "react-tabs";
 
+
 const data = [
   {
     sundayText: "Su",
@@ -64,6 +65,7 @@ const data = [
     saturdayText: "1",
   },
 ];
+
 
 const Home = () => {
   return (

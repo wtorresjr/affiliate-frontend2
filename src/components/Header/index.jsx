@@ -15,45 +15,43 @@ export default function Header({ ...props }) {
   const pathname = usePathname();
 
   return (
-    <header
-      {...props}
-      className={`${props.className} flex  self-stretch justify-between items-center gap-5`}
-    >
-      <SelectBox
-        size="md"
-        shape="square"
-        indicator={
-          <Img
-            src="img_arrowdown.svg"
-            width={16}
-            height={8}
-            alt="arrow_down"
-            className="h-[8px] w-[16px] ml-8"
-          />
-        }
-        name="Brand Dropdown"
-        placeholder={`Brand 1`}
-        options={dropDownOptions}
-        className="flex justify-between bg-white-A700 !rounded-[8px]"
-      />
+    <header {...props} className={`${props.className}`}>
+      <div className="sm:flex flex-col-reverse gap-[3px] w-full ">
+        <SelectBox
+          size="md"
+          shape="square"
+          indicator={
+            <Img
+              src="img_arrowdown.svg"
+              width={16}
+              height={8}
+              alt="arrow_down"
+              className="flex h-[8px] w-[16px]"
+            />
+          }
+          name="Brand Dropdown"
+          placeholder={`Brand 1`}
+          options={dropDownOptions}
+          className="sm:flex w-full bg-white-A700 !rounded-[8px]"
+        />
+        <div className="sm:flex flex-row justify-between items-center gap-[19px]">
+          <Button shape="round" className="w-[51px] shadow-sm bg-white-A700">
+            <Img src="img_vector.svg" width={51} height={51} />
+          </Button>
 
-       <div className="flex justify-end items-center gap-[19px] md:w-full">
-        <Button shape="round" className="w-[51px] shadow-sm bg-white-A700">
-          <Img src="img_vector.svg" width={51} height={51} />
-        </Button>
+          <SignedOut>
+            <SignInButton />
+          </SignedOut>
 
-        <SignedOut>
-          <SignInButton />
-        </SignedOut>
-
-        <SignedIn>
-          {"John Doe"}
-          <UserButton
-            afterSignOutUrl={`${
-              typeof window !== "undefined" ? window.location.origin : ""
+          <SignedIn>
+            {"John Doe"}
+            <UserButton
+              afterSignOutUrl={`${
+                typeof window !== "undefined" ? window.location.origin : ""
               }${pathname}`}
-          />
-        </SignedIn>
+            />
+          </SignedIn>
+        </div>
       </div>
     </header>
   );
