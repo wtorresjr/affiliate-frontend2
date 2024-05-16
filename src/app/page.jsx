@@ -7,64 +7,7 @@ import { SelectBox } from "@/components";
 import { dropDownOptions } from "./products";
 import Header1 from "@/components/Header1";
 import { Tabs, TabPanel, TabList, Tab } from "react-tabs";
-
-
-const data = [
-  {
-    sundayText: "Su",
-    mondayText: "Mo",
-    tuesdayText: "Tu",
-    wednesdayText: "We",
-    thursdayText: "Th",
-    fridayText: "Fr",
-    saturdayText: "Sa",
-  },
-  {
-    sundayText: "28",
-    mondayText: "29",
-    tuesdayText: "30",
-    wednesdayText: "1",
-    thursdayText: "2",
-    fridayText: "3",
-    saturdayText: "4",
-  },
-  {
-    sundayText: "5",
-    mondayText: "6",
-    tuesdayText: "7",
-    wednesdayText: "8",
-    thursdayText: "9",
-    fridayText: "10",
-    saturdayText: "11",
-  },
-  {
-    sundayText: "12",
-    mondayText: "13",
-    tuesdayText: "14",
-    wednesdayText: "15",
-    thursdayText: "16",
-    fridayText: "17",
-    saturdayText: "18",
-  },
-  {
-    sundayText: "19",
-    mondayText: "20",
-    tuesdayText: "21",
-    wednesdayText: "22",
-    thursdayText: "23",
-    fridayText: "24",
-    saturdayText: "25",
-  },
-  {
-    sundayText: "26",
-    mondayText: "27",
-    tuesdayText: "28",
-    wednesdayText: "29",
-    thursdayText: "30",
-    fridayText: "31",
-    saturdayText: "1",
-  },
-];
+import { hpDateData } from "./helperSeedData";
 
 
 const Home = () => {
