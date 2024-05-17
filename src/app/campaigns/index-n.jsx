@@ -10,8 +10,14 @@ import "../../styles/tailwind.css";
 export const CampaignPageView = () => {
   const [selected, setSelected] = useState(null);
   const [selectedDetails, setSelectedDetails] = useState(null);
+  const [showGraph, setShowGraph] = useState(false);
+
+  const getGraph = () => {
+    setShowGraph(true);
+  };
 
   useEffect(() => {
+    setShowGraph(false);
     const chosenMetric = campaignData.find(
       (metric) => metric.label === selected,
     );
@@ -40,19 +46,54 @@ export const CampaignPageView = () => {
       </select>
       {selectedDetails ? (
         <div
-          className="sm:flex flex-row justify-between items-center rounded-[8px] p-2 bg-green-200 mt-3"
+          className="sm:flex flex-row justify-between items-center rounded-[8px] p-2 bg-green-200 mt-3 h-[51px]"
           key={selectedDetails.image}
         >
-          <Img src={selectedDetails.image} width={25} height={25} />
+          <div
+            className="flex w-[35px] h-[35px] rounded-[22px] justify-center items-center"
+            style={{ backgroundColor: selectedDetails.iconBgColor }}
+          >
+            <Img src={selectedDetails.image} width={25} height={25} />
+          </div>
           <div>{selectedDetails.value}</div>
 
           <div className="sm:flex justify-between items-center gap-3">
-            <Img src="img_vector_2.svg" width={10} height={10} />
+            <Img
+              src="img_vector_2.svg"
+              width={10}
+              height={10}
+              className="bg-white-A700 h-[25px] w-[25px] rounded-[22px] p-1"
+            />
             <span className="text-red-500_01">{`${selectedDetails.percentage}%`}</span>
             <span className="text-black-900">&nbsp;this month</span>
           </div>
         </div>
       ) : null}
+      {selectedDetails && (
+        <button
+          onClick={() => getGraph()}
+          className="flex gap-[15px] bg-[#FF3B2E] text-white-A700 rounded-[6px] mt-3 h-[51px] justify-center items-center"
+        >
+          View Graph
+        </button>
+      )}
+      {showGraph && (
+        <>
+          <div className="sm:flex aspect-square w-full bg-white-A700 p-3 rounded-[8px] mt-3">
+            <Img
+              src="img_vector_yellow_900_139x1408.svg"
+              width={1408}
+              height={350}
+            />
+          </div>
+          <button
+            onClick={() => setShowGraph(false)}
+            className="flex gap-[15px] bg-[#FF3B2E] text-white-A700 rounded-[6px] mt-3 h-[51px] justify-center items-center"
+          >
+            Clear Graph
+          </button>
+        </>
+      )}
     </>
   );
 };
