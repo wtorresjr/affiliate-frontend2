@@ -63,6 +63,12 @@ select:focus {
     flex-grow: 1;
     width:60%;
   }
+
+  .select-style{
+    display:flex !important;
+    justify-content: space-between !important;
+    background-color: red !important;
+  }
 }
 
 
