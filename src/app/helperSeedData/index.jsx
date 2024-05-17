@@ -106,3 +106,26 @@ export const hpDateData = [
     saturdayText: "1",
   },
 ];
+
+export const campaignDetails = [
+  {
+    label: "Toocan.io - test",
+    id: "57755659512354864711",
+    clickThrus: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalDpv: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalAtc: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalPurchases: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalSales: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    brandRefBonus: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+  },
+  {
+    label: "Orca FlipFlops Gold",
+    id: "58055656612354302722",
+    clickThrus: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalDpv: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalAtc: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalPurchases: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    totalSales: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+    brandRefBonus: `${Math.floor(Math.random() * (20000 - 500 + 1)) + 500}`,
+  },
+];

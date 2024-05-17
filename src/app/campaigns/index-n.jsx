@@ -13,6 +13,7 @@ import {
 import WireframeCampaigns1OneUserprofile from "../components-main/WireframeCampaigns1OneUserprofile";
 import Header1 from "../../components/Header1";
 import "../../styles/tailwind.css";
+import { CampaignDetails } from "@/components/CampaignDetails";
 
 export const CampaignPageView = () => {
   const [selected, setSelected] = useState(null);
@@ -97,11 +98,10 @@ export const CampaignPageView = () => {
           </button>
         </>
       )}
+      <CampaignDetails />
     </>
   );
 };
-
-<SelectBox />;
 
 // <div className="sm:flex flex-wrap gap-[5px] mt-3">
 //   {campaignData.map((d, index) => (

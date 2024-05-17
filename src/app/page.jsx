@@ -9,7 +9,6 @@ import Header1 from "@/components/Header1";
 import { Tabs, TabPanel, TabList, Tab } from "react-tabs";
 import { hpDateData } from "./helperSeedData";
 
-
 const Home = () => {
   return (
     <Wrapper>
@@ -91,7 +90,7 @@ const Home = () => {
         <SelectBox
           placeholder={"Brand/Products"}
           options={dropDownOptions}
-          className="flex items-center bg-white-A700 rounded-[8px]"
+          className="flex items-center bg-white-A700 rounded-[8px] !h-[51px]"
         />
       </div>
     </Wrapper>
