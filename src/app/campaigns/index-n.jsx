@@ -2,7 +2,14 @@
 import React, { useEffect } from "react";
 import { useState } from "react";
 import { campaignData } from "../helperSeedData";
-import { Button, DateRange, Img, Text, SelectBox } from "../../components";
+import {
+  Button,
+  DateRange,
+  Img,
+  Text,
+  SelectBox,
+  ChartComponent,
+} from "../../components";
 import WireframeCampaigns1OneUserprofile from "../components-main/WireframeCampaigns1OneUserprofile";
 import Header1 from "../../components/Header1";
 import "../../styles/tailwind.css";
@@ -30,7 +37,7 @@ export const CampaignPageView = () => {
       <DateRange />
 
       <select
-        className="bg-white-A700 mt-3 p-4 rounded-[8px] appearance-none flex flex-row justify-between"
+        className="bg-white-A700 mt-3 p-4 rounded-[8px] appearance-none flex flex-row justify-center"
         onChange={(e) => setSelected(e.target.value)}
       >
         <option>Select a Metric</option>
@@ -80,11 +87,7 @@ export const CampaignPageView = () => {
       {showGraph && (
         <>
           <div className="sm:flex aspect-square w-full bg-white-A700 p-3 rounded-[8px] mt-3">
-            <Img
-              src="img_vector_yellow_900_139x1408.svg"
-              width={1408}
-              height={350}
-            />
+            <ChartComponent />
           </div>
           <button
             onClick={() => setShowGraph(false)}
@@ -97,6 +100,8 @@ export const CampaignPageView = () => {
     </>
   );
 };
+
+<SelectBox />;
 
 // <div className="sm:flex flex-wrap gap-[5px] mt-3">
 //   {campaignData.map((d, index) => (
